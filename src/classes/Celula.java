@@ -24,13 +24,31 @@ public class Celula {
     public void setProximaCelula(Celula proximaCelula) {
         this.proximaCelula = proximaCelula;
     }
-    
-    public void adicionaFinal(Celula novaUltimaCelula){
+
+    public void adicionaComeco(Celula novaPrimeiraCelula) {
+        novaPrimeiraCelula.proximaCelula = this;
+    }
+
+    public void adicionaFinal(Celula novaUltimaCelula) {
         this.proximaCelula = novaUltimaCelula;
     }
+
+    public void removeComeco() {
+        this.proximaCelula = null;
+    }
     
-    public void adicionaComeco(Celula novaPrimeiraCelula){
-        novaPrimeiraCelula.proximaCelula = this;
+    public void removeFinal(Celula novaUltimaCelula){
+        novaUltimaCelula.proximaCelula = null;            
+    }
+
+    public void adicionaEntreCelulas(Celula celulaAnterior, Celula celulaPosterior) {
+        celulaAnterior.proximaCelula = this;
+        this.proximaCelula = celulaPosterior;
+    }
+
+    public void removeEntreCelulas(Celula celulaInicio, Celula celulaFim) {
+        celulaInicio.proximaCelula = celulaFim;
+        this.proximaCelula = null;
     }
 
     @Override
