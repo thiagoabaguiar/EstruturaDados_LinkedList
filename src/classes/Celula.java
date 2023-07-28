@@ -36,9 +36,9 @@ public class Celula {
     public void removeComeco() {
         this.proximaCelula = null;
     }
-    
-    public void removeFinal(Celula novaUltimaCelula){
-        novaUltimaCelula.proximaCelula = null;            
+
+    public void removeFinal(Celula novaUltimaCelula) {
+        novaUltimaCelula.proximaCelula = null;
     }
 
     public void adicionaEntreCelulas(Celula celulaAnterior, Celula celulaPosterior) {
@@ -49,6 +49,22 @@ public class Celula {
     public void removeEntreCelulas(Celula celulaInicio, Celula celulaFim) {
         celulaInicio.proximaCelula = celulaFim;
         this.proximaCelula = null;
+    }
+
+    public int tamanhoCadeiaParaFrente() {
+        int tamanho = 1;
+
+        if (this.proximaCelula == null) {
+            return tamanho;
+        } else {
+            Celula celulaAtual = this.proximaCelula;
+            while (celulaAtual != null) {
+                tamanho++;
+                celulaAtual = celulaAtual.proximaCelula;
+            }
+        }
+
+        return tamanho;
     }
 
     @Override

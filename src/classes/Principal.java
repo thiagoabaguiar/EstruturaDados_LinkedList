@@ -57,6 +57,15 @@ public class Principal {
         //c1.removeEntreCelulas(c0, c2);
         //System.out.println(c0);
         
+        /* Cenário para contagem de células à frente (inclusive a atual)
+        à partir de um ponto da cadeia
+        */
+        //c0.adicionaFinal(c1);
+        //c1.adicionaFinal(c2);
+        //c2.adicionaFinal(c3);
+        //c3.adicionaFinal(c4);
+        //System.out.println(c0);       
+        //System.out.println("Total de Células: " + c0.tamanhoCadeiaParaFrente());
         
     }
 
