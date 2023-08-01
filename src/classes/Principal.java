@@ -7,11 +7,11 @@ public class Principal {
 
     public static void main(String[] args) {
 
-        String frase0 = "Estou no objeto 0";
-        String frase1 = "Estou no objeto 1";
-        String frase2 = "Estou no objeto 2";
-        String frase3 = "Estou no objeto 3";
-        String frase4 = "Estou no objeto 4";
+        String frase0 = "Banana";
+        String frase1 = "Maça";
+        String frase2 = "Abacaxi";
+        String frase3 = "Laranja";
+        String frase4 = "Mamão";
         
         Celula c0 = new Celula(frase0);
         Celula c1 = new Celula(frase1);
@@ -57,7 +57,7 @@ public class Principal {
         //c1.removeEntreCelulas(c0, c2);
         //System.out.println(c0);
         
-        /* Cenário para contagem de células à frente (inclusive a atual)
+        /* Cenário para CONTAGEM de células à frente (inclusive a atual)
         à partir de um ponto da cadeia
         */
         //c0.adicionaFinal(c1);
@@ -67,6 +67,19 @@ public class Principal {
         //System.out.println(c0);       
         //System.out.println("Total de Células: " + c0.tamanhoCadeiaParaFrente());
         
+        /* Cenário para LOCALIZAR a "posição" de um elemento,
+        contando à partir da Célula informada
+        */        
+        c0.adicionaFinal(c1);
+        c1.adicionaFinal(c2);
+        c2.adicionaFinal(c3);
+        c3.adicionaFinal(c4);
+        String fraseALocalizar = "Abacaxi";
+        System.out.println("Posição da frase desejada: " + c0.localizaPosicaoElemento(fraseALocalizar));
+
+        
     }
 
 }
+
+
