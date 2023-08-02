@@ -84,8 +84,8 @@ public class Principal {
         c1.adicionaFinal(c2);
         c2.adicionaFinal(c3);
         c3.adicionaFinal(c4);
-        int posicao = 2;
-        System.out.println("O elemento interno na posição " + posicao + " é: " + c0.localizaElementoPorPosicao(posicao));
+        //int posicao = 2;
+        //System.out.println("O elemento interno na posição " + posicao + " é: " + c0.localizaElementoPorPosicao(posicao));
         
     }
 
