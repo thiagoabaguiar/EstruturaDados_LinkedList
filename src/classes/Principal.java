@@ -70,13 +70,22 @@ public class Principal {
         /* Cenário para LOCALIZAR a "posição" de um elemento,
         contando à partir da Célula informada
         */        
+        //c0.adicionaFinal(c1);
+        //c1.adicionaFinal(c2);
+        //c2.adicionaFinal(c3);
+        //c3.adicionaFinal(c4);
+        //String fraseALocalizar = "Abacaxi";
+        //System.out.println("Posição da frase desejada: " + c0.localizaPosicaoElemento(fraseALocalizar));
+
+        /* Cenário para LOCALIZAR um elemento, à partir de uma posição informada.
+        A posição será contada á partir da célula que chamar o método.        
+        */
         c0.adicionaFinal(c1);
         c1.adicionaFinal(c2);
         c2.adicionaFinal(c3);
         c3.adicionaFinal(c4);
-        String fraseALocalizar = "Abacaxi";
-        System.out.println("Posição da frase desejada: " + c0.localizaPosicaoElemento(fraseALocalizar));
-
+        int posicao = 2;
+        System.out.println("O elemento interno na posição " + posicao + " é: " + c0.localizaElementoPorPosicao(posicao));
         
     }
 

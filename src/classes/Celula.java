@@ -86,6 +86,26 @@ public class Celula {
         return posicao;
     }
 
+    public Object localizaElementoPorPosicao(int posicaoALocalizar) {
+        Celula celulaAtual = this;
+        Object elementoInternoLocalizado = this.elementoInterno;
+
+        int i = 0;
+        while (i < posicaoALocalizar) {
+
+            if (celulaAtual.proximaCelula != null) {
+                celulaAtual = celulaAtual.proximaCelula;
+                elementoInternoLocalizado = celulaAtual.elementoInterno;
+                i++;
+            } else{
+                elementoInternoLocalizado = null;
+                break;
+            }
+        }
+
+        return elementoInternoLocalizado;
+    }
+
     @Override
     public String toString() {
         return "Celula :: { \n elementoInterno : " + elementoInterno + "\n proximaCelula : " + proximaCelula + "} \n";
