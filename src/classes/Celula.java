@@ -1,19 +1,19 @@
 package classes;
 
-public class Celula {
+public class Celula<T> {
 
-    private Object elementoInterno;
+    private T elementoInterno;
     private Celula proximaCelula;
 
-    public Celula(Object elementoInterno) {
+    public Celula(T elementoInterno) {
         this.elementoInterno = elementoInterno;
     }
 
-    public Object getElementoInterno() {
+    public T getElementoInterno() {
         return elementoInterno;
     }
 
-    public void setElementoInterno(Object elementoInterno) {
+    public void setElementoInterno(T elementoInterno) {
         this.elementoInterno = elementoInterno;
     }
 
@@ -117,7 +117,7 @@ public class Celula {
      * @return 
      * Posição relativa do objecto localizado, considerando a célula atual como início da cadeia
      */
-    public int localizaPosicaoElemento(Object elementoALocalizar) {
+    public int localizaPosicaoElemento(T elementoALocalizar) {
         int posicao = 0;
         Celula celulaAtual = this;
 

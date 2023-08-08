@@ -1,23 +1,23 @@
 package classes;
 
-public class Lista {
+public class Lista<T> {
 
-    private Celula entradaLista;
+    private Celula<T> entradaLista;
 
     public Lista() {
         this.entradaLista = null;
     }
 
-    public void add(Object elemento) {
+    public void add(T elemento) {
 
-        Celula novaCelula = new Celula(elemento);
+        Celula<T> novaCelula = new Celula(elemento);
 
         if (this.isEmpty()) {
             this.entradaLista = novaCelula;
             return;
         }
 
-        Celula celulaAtual = this.entradaLista;
+        Celula<T> celulaAtual = this.entradaLista;
         while (true) {
             if (celulaAtual.getProximaCelula() == null) {
                 celulaAtual.setProximaCelula(novaCelula);
@@ -31,8 +31,8 @@ public class Lista {
 
     public void removeLast() {
 
-        Celula celulaAtual = entradaLista;
-        Celula celulaAnteriorAAtual = entradaLista;
+        Celula<T> celulaAtual = entradaLista;
+        Celula<T> celulaAnteriorAAtual = entradaLista;
 
         if (this.entradaLista == null) {
             return;
@@ -63,7 +63,7 @@ public class Lista {
             return tamanho = 0;
         }
 
-        Celula celulaAtual = this.entradaLista;
+        Celula<T> celulaAtual = this.entradaLista;
         while (true) {
 
             if (celulaAtual.getProximaCelula() == null) {
@@ -91,7 +91,7 @@ public class Lista {
             return retorno += "null";
         }
 
-        Celula celulaAtual = entradaLista;
+        Celula<T> celulaAtual = entradaLista;
         while (true) {
             retorno += celulaAtual.getElementoInterno() + "\n";
             if (celulaAtual.getProximaCelula() == null) {
