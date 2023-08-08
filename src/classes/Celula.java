@@ -24,6 +24,12 @@ public class Celula {
     public void setProximaCelula(Celula proximaCelula) {
         this.proximaCelula = proximaCelula;
     }
+    
+    
+    
+    /////////////////////////////////////////////////////////
+    
+    
 
     /**
      * Método para adicionar uma nova célula no começo da cadeia
